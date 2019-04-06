@@ -10,6 +10,35 @@
       <input type="tel" class="form-control" [(ngModel)]="contato.telefone" name="telefone">
     </div>
 
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="email" class="form-control" [(ngModel)]="contato.email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="">Rua</label>
+      <input type="rua" class="form-control" [(ngModel)]="contato.rua" name="rua">
+    </div>
+
+    <div class="form-group">
+      <label for="">Numero</label>
+      <input type="number" class="form-control" [(ngModel)]="contato.numero" name="numero">
+    </div>
+
+    <div class="form-group">
+      <label for="">Bairro</label>
+      <input type="bairro" class="form-control" [(ngModel)]="contato.bairro" name="bairro">
+    </div>
+
+    <div class="form-group">
+      <label for="">Cidade</label>
+      <input type="city" class="form-control" [(ngModel)]="contato.cidade" name="cidade">
+    </div>
+
     <button type="submit" class="btn btn-primary">Salvar</button>
 
 </form>
+
+<div>
+  <!-- <button class="btn btn-primary" (click)="listar()">Listar Contatos</button> -->
+</div>

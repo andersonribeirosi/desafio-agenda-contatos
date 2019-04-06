@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContatoService } from '../shared/contato.service';
 import { ContatoDataService } from '../shared/contato-data.service';
 import { Contato } from '../shared/contato';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -17,19 +18,34 @@ export class EditComponent implements OnInit {
   constructor(
     private contatoService: ContatoService,
     private contatoDataService: ContatoDataService,
-    ) { }
+    private route: Router
+  ) { }
 
   ngOnInit() {
     this.contato = new Contato();
+    this.contatoDataService.currentContato.subscribe(data => {
+      if (data.contato && data.key) {
+        this.contato = new Contato();
+        this.contato.nome = data.contato.nome;
+        this.contato.telefone = data.contato.telefone;
+        this.key = data.key;
+      }
+    })
   }
 
-  onSubmit(){
-    if(this.key){
-
+  onSubmit() {
+    if (this.key) {
+      this.contatoService.update(this.contato, this.key);
     } else {
       this.contatoService.insert(this.contato);
     }
+
     this.contato = new Contato();
   }
+
+  listar(){
+    this.route.navigateByUrl('/listContatos');
+  }
+
 
 }

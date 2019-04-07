@@ -1,3 +1,7 @@
+<div>
+  <h4>Lista de Contatos</h4>
+ </div>
+ 
 <div class="card mt-2" *ngFor="let contato of contatos | async">
 <div class="card-body">
   <h5 class="card-title">Nome: {{contato.nome}}</h5>
@@ -6,7 +10,7 @@
   
 </div>
 <div class="card-footer">
-  <button type="button" class="btn btn-default" (click)="edit(contato, contato.key)"> Editar </button>
+  <button type="button" class="btn btnEdit" (click)="edit(contato, contato.key)"> Editar </button>
   <button type="button" class="btn btn-danger ml-2" (click)="delete(contato.key)"> Deletar </button>
 
 </div>

@@ -3,6 +3,7 @@ import { ContatoService } from '../shared/contato.service';
 import { ContatoDataService } from '../shared/contato-data.service';
 import { Observable } from 'rxjs';
 import { Contato } from '../shared/contato';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -14,7 +15,8 @@ export class ListComponent implements OnInit {
   contatos: Observable<any>;
 
   constructor(private contatoService: ContatoService,
-    private contatoDataService: ContatoDataService) { }
+    private contatoDataService: ContatoDataService,
+    private route: Router) { }
 
   ngOnInit() {
     this.contatos = this.contatoService.getAll();
@@ -25,6 +27,7 @@ export class ListComponent implements OnInit {
   }
 
   edit(contato: Contato, key: string) {
+  this.route.navigateByUrl('/edit');
     this.contatoDataService.changeContato(contato, key);
   }
 

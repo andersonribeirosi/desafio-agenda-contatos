@@ -73,7 +73,7 @@ export class EditComponent implements OnInit {
   }
 
   listar(){
-    this.route.navigateByUrl('/listContatos');
+    this.route.navigateByUrl('/listar');
   }
 
 

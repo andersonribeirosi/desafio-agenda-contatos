@@ -43,12 +43,12 @@ export class EditComponent implements OnInit {
   criaFormsGroup() {
     this.contatoForm = this.fb.group({
       nome: ['', Validators.compose([Validations.required])],
-      email: ['', Validators.compose([Validators.required])],
-      telefone: ['', Validators.compose([Validators.required])],
-      rua: ['', Validators.compose([Validators.required])],
-      numero: ['', Validators.compose([Validators.required])],
-      bairro: ['', Validators.compose([Validators.required])],
-      cidade: ['', Validators.compose([Validators.required])],
+      email: ['', Validators.compose([Validations.required])],
+      telefone: ['', Validators.compose([Validations.required])],
+      rua: ['', Validators.compose([Validations.required])],
+      numero: ['', Validators.compose([Validations.required])],
+      bairro: ['', Validators.compose([Validations.required])],
+      cidade: ['', Validators.compose([Validations.required])],
     });
   }
 

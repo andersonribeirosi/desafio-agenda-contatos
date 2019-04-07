@@ -1,3 +1,31 @@
 input{
-    width:30%
+    width:50%
 }
+
+.align{
+    margin-left: 30%;
+  }
+
+  input[type="text"] {
+    color: #363636;
+    width: 50%;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+  input[type="text"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+
+  #error{
+    color: red;
+    font-size: 10px;
+    padding-top: -1px;
+    margin: -3px 0px 4px 1px;
+  }

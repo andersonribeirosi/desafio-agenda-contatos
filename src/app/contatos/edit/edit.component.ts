@@ -28,22 +28,27 @@ export class EditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.criaFormsGroup();
+    this.contatoFormGroup();
     this.contato = new Contato();
     this.contatoDataService.currentContato.subscribe(data => {
       if (data.contato && data.key) {
         this.contato = new Contato();
         this.contato.nome = data.contato.nome;
         this.contato.telefone = data.contato.telefone;
+        this.contato.email = data.contato.email;
+        this.contato.bairro = data.contato.bairro;
+        this.contato.cidade = data.contato.cidade;
+        this.contato.rua = data.contato.rua;
+        this.contato.numero = data.contato.numero;
         this.key = data.key;
       }
     })
   }
 
-  criaFormsGroup() {
+  contatoFormGroup() {
     this.contatoForm = this.fb.group({
       nome: ['', Validators.compose([Validations.required])],
-      email: ['', Validators.compose([Validations.required])],
+      email: ['', Validators.compose([Validations.required, Validations.email])],
       telefone: ['', Validators.compose([Validations.required])],
       rua: ['', Validators.compose([Validations.required])],
       numero: ['', Validators.compose([Validations.required])],

@@ -1,4 +1,4 @@
-import { Contato } from './contato';
+import { Contato } from '../../models/contato';
 
 describe('Contato', () => {
   it('should create an instance', () => {

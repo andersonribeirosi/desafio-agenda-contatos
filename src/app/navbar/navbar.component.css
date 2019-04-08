@@ -1,0 +1,68 @@
+.navbar.navbar-dark {
+    background-color: #008080;
+    z-index: 20;
+  }
+  
+  .navbar-brand.logotipo {
+    position: absolute;
+    width: 150px;
+    margin-right: 15px;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .logotipo-sidebar {
+    width: 120px;
+    padding-top: 80px;
+  }
+  
+  .collapse .navbar-collapse {
+    background-color: white;
+  }
+  
+  .logo-sidebar {
+    width: 170px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 9%;
+  }
+  
+  .sidebar-item {
+  margin-left: 40px;
+  display: block;
+  color: #008080;
+  margin-bottom: 9%;
+  margin-left: 40px;
+  margin-bottom: 9%;
+  font-size: 16px;
+  }
+  
+  .icone{
+  width: 22px;
+  margin-right: 20px;
+
+  }
+  
+  .sidebar {
+    background-color: white;
+    width: 350px;
+    z-index: 19;
+    top: 0;
+    position: absolute;
+    min-height: 100%;
+  }
+  
+  hr {
+    width: 130px;
+    height: 2px;
+    color: #F2F2F2
+  }
+  
+  .sidebar-menu {
+    margin-top: 100px;
+  }
+  
+  .logo-navbar {
+    margin-top: -4%;
+  }  

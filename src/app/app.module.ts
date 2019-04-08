@@ -10,12 +10,16 @@ import { environment } from 'src/environments/environment';
 import { EditComponent } from './contatos/edit/edit.component';
 import { ListComponent } from './contatos/list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AddComponent } from './contatos/add/add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditComponent,
-    ListComponent
+    ListComponent,
+    NavbarComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

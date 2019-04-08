@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ContatoService } from '../shared/contato.service';
-import { ContatoDataService } from '../shared/contato-data.service';
+import { ContatoService } from '../../services/contato.service';
+import { ContatoDataService } from '../../services/contato-data.service';
 import { Observable } from 'rxjs';
-import { Contato } from '../shared/contato';
+import { Contato } from '../../models/contato';
 import { Router } from '@angular/router';
 
 @Component({

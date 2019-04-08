@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark">
+  <button class="navbar-toggler navbar-toggler-right" type="button" (click)="open()">
+    <span class="navbar-toggler-icon"></span>
+    <span class="sideBar" data-glyph="mySidebar"></span>
+  </button>
+  <!-- <a title="Página inicial" class="logo-navbar" routerLink="/painel/menu">
+    <img class="navbar-brand logotipo" src="../../assets/Asset 7.svg">
+  </a> -->
+</nav>
+​
+<div routerLinkActive="active" class="sidebar" style="display:none" id="mySidebar">
+  <div class="sidebar-menu">
+    <a class="sidebar-item" routerLink="/add">
+      <img class="icone" src="../../assets/create-group-button.svg">
+      Adicionar Contato</a>
+
+    <a class="sidebar-item" routerLink="/list">
+      <img class="icone" src="../../assets/list.svg">
+      Listar Contato</a>
+
+    <a id="menu" class="sidebar-item" routerLink="/logOut">
+      <img class="icone" src="../../assets/logout.svg" alt="icone-logout">
+      Sair</a>
+  </div>
+</div>

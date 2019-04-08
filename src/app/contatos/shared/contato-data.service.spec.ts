@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ContatoDataService } from './contato-data.service';
+import { ContatoDataService } from '../../services/contato-data.service';
 
 describe('ContatoDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

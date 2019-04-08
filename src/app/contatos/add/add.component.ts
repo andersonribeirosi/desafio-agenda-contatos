@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ContatoService } from '../../services/contato.service';
-import { ContatoDataService } from '../../services/contato-data.service';
-import { Contato } from '../../models/contato';
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Validations } from 'src/app/services/validations';
+import { Contato } from 'src/app/models/contato';
+import { ContatoService } from 'src/app/services/contato.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  selector: 'app-add',
+  templateUrl: './add.component.html',
+  styleUrls: ['./add.component.css']
 })
-export class EditComponent implements OnInit {
+export class AddComponent implements OnInit {
 
   contatoForm: FormGroup;
   contato: Contato;
@@ -22,7 +21,6 @@ export class EditComponent implements OnInit {
 
   constructor(
     private contatoService: ContatoService,
-    private contatoDataService: ContatoDataService,
     private route: Router,
     private fb: FormBuilder
   ) { }
@@ -30,19 +28,6 @@ export class EditComponent implements OnInit {
   ngOnInit() {
     this.contatoFormGroup();
     this.contato = new Contato();
-    this.contatoDataService.currentContato.subscribe(data => {
-      if (data.contato && data.key) {
-        this.contato = new Contato();
-        this.contato.nome = data.contato.nome;
-        this.contato.telefone = data.contato.telefone;
-        this.contato.email = data.contato.email;
-        this.contato.bairro = data.contato.bairro;
-        this.contato.cidade = data.contato.cidade;
-        this.contato.rua = data.contato.rua;
-        this.contato.numero = data.contato.numero;
-        this.key = data.key;
-      }
-    })
   }
 
   contatoFormGroup() {
@@ -67,19 +52,13 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.key) {
-      this.contatoService.update(this.contato, this.key);
-    } else {
-      this.contatoService.insert(this.contato);
-    }
-
+    this.contatoService.insert(this.contato);
     this.contato = new Contato();
     this.contatoForm.reset();
   }
 
-  listar(){
-    this.route.navigateByUrl('/listar');
+  listar() {
+    this.route.navigateByUrl('/list');
   }
-
 
 }

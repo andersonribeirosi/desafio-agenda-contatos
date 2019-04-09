@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddComponent } from './contatos/add/add.component';
 import { HomeComponent } from './contatos/home/home.component';
+import { NgxPhoneMaskBrModule } from 'ngx-phone-mask-br';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeComponent } from './contatos/home/home.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPhoneMaskBrModule
   ],
   providers: [],
   bootstrap: [AppComponent]

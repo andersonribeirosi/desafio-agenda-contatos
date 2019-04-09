@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'add', component: AddComponent },
   { path: 'edit', component: EditComponent },
   { path: 'list', component: ListComponent },
-  { path: '**', component: AddComponent }
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

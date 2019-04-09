@@ -56,6 +56,7 @@ export class AddComponent implements OnInit {
     this.contato = new Contato();
     this.contatoForm.reset();
     alert('Contato adicionado com sucesso!!!')
+    this.route.navigateByUrl('list');
   }
 
 }

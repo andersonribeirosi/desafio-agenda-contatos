@@ -44,6 +44,12 @@ input{
   }
 
   #save{
-    width: 25%;
+    width: 23%;
+    margin-left: 1px;
+  }
+
+  #cancel{
+    width: 23%;
+    margin-left: 35px !important;
   }
 

@@ -49,7 +49,9 @@
       </div>
       <div id="error">{{ getError('cidade') }}</div>
   
-      <button type="submit" class="btn btn-primary" [disabled]="contatoForm.invalid">Salvar</button>
+      <button type="submit" id="save" class="btn btn-primary" [disabled]="contatoForm.invalid">Salvar</button>
+
+      <button type="submit" id="save" class="btn btn-dark">Cancelar</button>
   
   </form>
 </div>

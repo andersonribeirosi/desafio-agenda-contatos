@@ -1,51 +1,49 @@
 <app-navbar></app-navbar>
+
+<div class="title">
+  <h4>Adicionar Contato</h4>
+ </div>
+
 <div class="align">
   <form class="content-flex" (ngSubmit)="onSubmit()" [formGroup]="contatoForm">
 
     <div class="form-group">
-      <!-- <label>Nome</label> -->
       <input placeholder="Nome" formControlName="nome" type="text" class="form-control" 
       [(ngModel)]="contato.nome" name="nome" #nome required>
     </div>
     <div id="error">{{ getError('nome') }}</div>
   
     <div class="form-group">
-        <!-- <label for="">Telefone</label> -->
         <input placeholder="Telefone" formControlName="telefone" type="text" class="form-control" 
         [(ngModel)]="contato.telefone" name="telefone" #telefone required>
       </div>
       <div id="error">{{ getError('telefone') }}</div>
   
       <div class="form-group">
-        <!-- <label for="">Email</label> -->
         <input placeholder="Email" formControlName="email" type="text" class="form-control" 
         [(ngModel)]="contato.email" name="email" #email required>
       </div>
       <div id="error">{{ getError('email') }}</div>
   
       <div class="form-group">
-        <!-- <label for="">Rua</label> -->
         <input placeholder="Endereço" formControlName="rua" type="text" class="form-control" 
         [(ngModel)]="contato.rua" name="rua" #rua required>
       </div>
       <div id="error">{{ getError('rua') }}</div>
   
       <div class="form-group">
-        <!-- <label for="">Numero</label> -->
         <input placeholder="Número" formControlName="numero" type="text" class="form-control" 
         [(ngModel)]="contato.numero" name="numero" #numero required>
       </div>
       <div id="error">{{ getError('numero') }}</div>
   
       <div class="form-group">
-        <!-- <label for="">Bairro</label> -->
         <input placeholder="Bairro" formControlName="bairro" type="text" class="form-control" 
         [(ngModel)]="contato.bairro" name="bairro" #bairro required>
       </div>
       <div id="error">{{ getError('bairro') }}</div>
   
       <div class="form-group">
-        <!-- <label for="">Cidade</label> -->
         <input placeholder="Cidade" formControlName="cidade" type="text" class="form-control" 
         [(ngModel)]="contato.cidade" name="cidade" #cidade required>
       </div>

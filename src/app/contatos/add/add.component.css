@@ -2,8 +2,14 @@ input{
     width:50%
 }
 
+.title{
+  text-align: center;
+  color: #008080;
+}
+
 .align{
-    margin-left: 30%;
+    margin-left: 32%;
+    margin-top: 35px;
   }
 
   .align1 {

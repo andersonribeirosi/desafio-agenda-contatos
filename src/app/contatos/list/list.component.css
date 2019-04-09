@@ -20,8 +20,7 @@
     color: white;
 }
 
-h4{
-    margin-top: 25px;
-    margin-left: 66px;
-    color: darkslategrey;
-  }
+.title{
+  text-align: center;
+  color: #008080;
+}

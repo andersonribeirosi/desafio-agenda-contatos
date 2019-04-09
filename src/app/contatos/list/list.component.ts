@@ -22,12 +22,13 @@ export class ListComponent implements OnInit {
     this.contatos = this.contatoService.getAll();
   }
 
-  delete(key: string){
+  delete(key: string) {
     this.contatoService.delete(key);
+    alert('Contato deletado com sucesso!!!');
   }
 
   edit(contato: Contato, key: string) {
-  this.route.navigateByUrl('/edit');
+    this.route.navigateByUrl('/edit');
     this.contatoDataService.changeContato(contato, key);
   }
 

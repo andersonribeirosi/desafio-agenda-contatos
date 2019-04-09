@@ -69,15 +69,15 @@ export class EditComponent implements OnInit {
   onSubmit() {
     if (this.key) {
       this.contatoService.update(this.contato, this.key);
+      alert('Contato atualizado com sucesso!!!')
     }
     this.contato = new Contato();
     this.contatoForm.reset();
     this.route.navigateByUrl('/list');
   }
 
-  listar() {
-    this.route.navigateByUrl('/listar');
+  btnList() {
+    this.route.navigateByUrl('/list');
   }
-
 
 }

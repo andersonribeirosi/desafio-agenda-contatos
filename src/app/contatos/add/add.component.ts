@@ -55,10 +55,7 @@ export class AddComponent implements OnInit {
     this.contatoService.insert(this.contato);
     this.contato = new Contato();
     this.contatoForm.reset();
-  }
-
-  listar() {
-    this.route.navigateByUrl('/list');
+    alert('Contato adicionado com sucesso!!!')
   }
 
 }

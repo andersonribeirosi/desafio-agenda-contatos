@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<div class="title">
+  <h4>Detalhes</h4>
+</div>
+
+<div class="align">
+  <form class="content-flex" (ngSubmit)="onSubmit()" [formGroup]="contatoForm">
+
+    <div class="form-group">
+      <input placeholder="Nome" formControlName="nome" type="text" class="form-control" [(ngModel)]="contato.nome"
+        name="nome" #nome required disabled>
+    </div>
+
+    <div class="form-group">
+      <input ngxPhoneMaskBr placeholder="Telefone" formControlName="telefone" type="text" class="form-control"
+        [(ngModel)]="contato.telefone" name="telefone" #telefone required disabled>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Email" formControlName="email" type="text" class="form-control" [(ngModel)]="contato.email"
+        name="email" #email required disabled>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Endereço" formControlName="rua" type="text" class="form-control" [(ngModel)]="contato.rua"
+        name="rua" #rua required disabled>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Número" formControlName="numero" type="text" class="form-control" [(ngModel)]="contato.numero"
+        name="numero" #numero required disabled>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Bairro" formControlName="bairro" type="text" class="form-control" [(ngModel)]="contato.bairro"
+        name="bairro" #bairro required disabled>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Cidade" formControlName="cidade" type="text" class="form-control" [(ngModel)]="contato.cidade"
+        name="cidade" #cidade required disabled>
+    </div>
+    
+  </form>
+</div>
+<div>
+    <button type="button" class="btn btnBack btn-dark" (click)="btnCancel()"> Voltar </button>
+</div>

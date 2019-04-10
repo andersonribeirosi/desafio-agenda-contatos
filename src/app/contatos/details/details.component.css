@@ -1,0 +1,56 @@
+input{
+    width:50%
+}
+
+.align{
+  margin-left: 32%;
+  margin-top: 35px;
+}
+
+  .title{
+    text-align: center;
+    color: #008080;
+  }
+
+  .align1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+  }
+
+  input[type="text"] {
+    color: #363636;
+    width: 50%;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+  input[type="text"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+
+  #error{
+    color: red;
+    font-size: 10px;
+    padding-top: -15px;
+    margin: -3px 0px 4px 1px;
+  }
+
+  #back{
+    width: 23%;
+    margin: 0 auto;
+  }
+
+  .btnBack{
+      width: 34%;
+      margin: 0 auto;
+      margin-left: 32%;
+  }
+

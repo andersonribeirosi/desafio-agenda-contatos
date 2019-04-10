@@ -4,6 +4,7 @@ import { ListComponent } from './contatos/list/list.component';
 import { EditComponent } from './contatos/edit/edit.component';
 import { AddComponent } from './contatos/add/add.component';
 import { HomeComponent } from './contatos/home/home.component';
+import { DetailsComponent } from './contatos/details/details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'add', component: AddComponent },
   { path: 'edit', component: EditComponent },
   { path: 'list', component: ListComponent },
+  { path: 'details', component: DetailsComponent },
   { path: '**', component: HomeComponent }
 ];
 

@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddComponent } from './contatos/add/add.component';
 import { HomeComponent } from './contatos/home/home.component';
 import { NgxPhoneMaskBrModule } from 'ngx-phone-mask-br';
+import { DetailsComponent } from './contatos/details/details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgxPhoneMaskBrModule } from 'ngx-phone-mask-br';
     ListComponent,
     NavbarComponent,
     AddComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

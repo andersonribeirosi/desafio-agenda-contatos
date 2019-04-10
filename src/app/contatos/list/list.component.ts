@@ -32,4 +32,10 @@ export class ListComponent implements OnInit {
     this.contatoDataService.changeContato(contato, key);
   }
 
+  details(contato: Contato, key: string){
+    this.route.navigateByUrl('/details');
+    this.contatoDataService.changeContato(contato, key);
+
+  }
+
 }

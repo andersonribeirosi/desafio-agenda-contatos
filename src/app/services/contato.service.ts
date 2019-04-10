@@ -14,7 +14,6 @@ export class ContatoService {
     this.db.list('contato').push(contato)
     .then((result:any) => {
       console.log(result.key);
-      
     });
   }
 

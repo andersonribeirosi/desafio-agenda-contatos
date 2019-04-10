@@ -21,7 +21,7 @@
   }
   
   .logo-sidebar {
-    width: 170px;
+    width: 100px;
     margin: 0 auto;
     display: block;
     margin-top: 40px;
@@ -46,7 +46,7 @@
   
   .sidebar {
     background-color: white;
-    width: 350px;
+    width: 280px;
     z-index: 19;
     top: 0;
     position: absolute;

@@ -5,7 +5,7 @@
 </div>
 
 <div class="align">
-  <form class="content-flex" (ngSubmit)="onSubmit()" [formGroup]="contatoForm">
+  <form class="content-flex" [formGroup]="contatoForm">
 
     <div class="form-group">
       <input placeholder="Nome" formControlName="nome" type="text" class="form-control" [(ngModel)]="contato.nome"

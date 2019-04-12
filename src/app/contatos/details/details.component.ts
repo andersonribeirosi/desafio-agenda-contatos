@@ -17,11 +17,7 @@ export class DetailsComponent implements OnInit {
   contato: Contato;
   key: string = '';
 
-  maskPhone: any[] = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-
-
   constructor(
-    private contatoService: ContatoService,
     private contatoDataService: ContatoDataService,
     private route: Router,
     private fb: FormBuilder
@@ -55,25 +51,6 @@ export class DetailsComponent implements OnInit {
       bairro: ['', Validators.compose([Validations.required])],
       cidade: ['', Validators.compose([Validations.required])],
     });
-  }
-
-  getError(field) {
-    const fieldGroup = this.contatoForm.get(field);
-    if (fieldGroup.errors && fieldGroup.dirty && fieldGroup.touched) {
-      return fieldGroup.errors.message;
-    } else if (this.contatoForm.errors) {
-      return fieldGroup.errors.message;
-    }
-  }
-
-  onSubmit() {
-    if (this.key) {
-      this.contatoService.update(this.contato, this.key);
-      alert('Contato atualizado com sucesso!!!')
-    }
-    this.contato = new Contato();
-    this.contatoForm.reset();
-    this.route.navigateByUrl('/list');
   }
 
   btnCancel() {

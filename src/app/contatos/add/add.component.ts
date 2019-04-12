@@ -16,9 +16,6 @@ export class AddComponent implements OnInit {
   contato: Contato;
   key: string = '';
 
-  maskPhone: any[] = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-
-
   constructor(
     private contatoService: ContatoService,
     private route: Router,

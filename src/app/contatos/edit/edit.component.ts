@@ -17,9 +17,6 @@ export class EditComponent implements OnInit {
   contato: Contato;
   key: string = '';
 
-  maskPhone: any[] = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-
-
   constructor(
     private contatoService: ContatoService,
     private contatoDataService: ContatoDataService,
